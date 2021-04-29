@@ -1,11 +1,11 @@
-const create = require("express").Router();
+const del = require("express").Router();
 const {
     cosmetics
 } = require('../models');
 
 
 
-create.delete('/delete/id/:id', (req, res) => {
+del.delete('/id/:id', (req, res) => {
     const id = Number(req.params.id);
     if (Number.isInteger(id) && id > 0) {
         cosmetics.destroy({
@@ -43,7 +43,7 @@ create.delete('/delete/id/:id', (req, res) => {
 
 
 
-create.delete('/delete/all', (req, res) => {
+del.delete('/all', (req, res) => {
     cosmetics.destroy({
             truncate: true
         })
@@ -70,4 +70,4 @@ create.delete('/delete/all', (req, res) => {
 
 
 
-module.exports = create;
+module.exports = del;

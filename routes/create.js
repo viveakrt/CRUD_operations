@@ -5,7 +5,7 @@ const {
 
 
 
-create.post('/add', (req, res) => {
+create.post('/', (req, res) => {
     if (
         !req.body.Label ||
         !req.body.Brand ||
@@ -50,7 +50,7 @@ create.post('/add', (req, res) => {
 
 
 
-create.post('/add/all', (req, res) => {
+create.post('/all', (req, res) => {
         cosmetics.bulkCreate(
             req.body
         ,{ returning: true }).then(Data => {
@@ -62,7 +62,6 @@ create.post('/add/all', (req, res) => {
         }).catch(err => {
             res.status(500).json({
                 message: "Internal Error",
-                body:req.body
             })
             .end();
         });

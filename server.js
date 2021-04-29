@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use("/", create);
-app.use("/", del);
-// app.use("/", read);
-// app.use("/", update);
+app.use("/add", create);
+app.use("/delete", del);
+app.use("/get", read);
+app.use("/update", update);
 
 
 db.sequelize
