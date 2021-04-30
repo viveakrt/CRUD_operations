@@ -10,20 +10,54 @@ const {
 
 read.get('/all', (req, res) => {
     cosmetics.findAll().then(Data => {
-        res.status(201)
-            .json({
+        res.status(200)
+        .json({
                 Data
             })
             .end();
     }).catch(err => {
         res.status(500).json({
-                message: "Internal Error",
+            message: "Internal Error",
             })
             .end();
-    });
-
+        });
+        
 });
 
+read.get('/:id', (req, res) => {
+    const id = Number(req.params.id);
+    if (Number.isInteger(id) && id > 0) {
+        cosmetics.findByPk(id)
+            .then(Data => {
+                if(Data) {
+                    res.status(200)
+                    .json({
+                        Data
+                    })
+                    .end();
+                }else{
+                    res.status(404)
+                    .json({
+                        message:"NO DATA MATCH"
+                    })
+
+                    .end()
+                }
+
+
+            }).catch(err => {
+                res.status(500).json({
+                        message: "Internal Error",
+                    })
+                    .end();
+            });
+    } else {
+        res.status(400).json({
+                message: `ERROR Id is : ${id}`,
+            })
+            .end();
+    }
+});
 
 
 read.get('/allCategories', (req, res) => {
@@ -33,7 +67,7 @@ read.get('/allCategories', (req, res) => {
             ]
         })
         .then(Data => {
-            res.status(201)
+            res.status(200)
                 .json({
                     Data
                 })
@@ -60,7 +94,7 @@ read.get('/allCategories/:id', (req, res) => {
             ]
         })
         .then(Data => {
-            res.status(201)
+            res.status(200)
                 .json({
                     Data
                 })
@@ -73,29 +107,7 @@ read.get('/allCategories/:id', (req, res) => {
         });
 });
 
-read.get('/:id', (req, res) => {
-    const id = Number(req.params.id);
-    if (Number.isInteger(id) && id > 0) {
-        cosmetics.findByPk(id)
-            .then(Data => {
-                res.status(201)
-                    .json({
-                        Data
-                    })
-                    .end();
-            }).catch(err => {
-                res.status(500).json({
-                        message: "Internal Error",
-                    })
-                    .end();
-            });
-    } else {
-        res.status(400).json({
-                message: `ERROR Id is : ${id}`,
-            })
-            .end();
-    }
-});
+
 
 read.get('/name/:id', (req, res) => {
     const name = req.params.id;
@@ -107,7 +119,7 @@ read.get('/name/:id', (req, res) => {
             }
         })
         .then(Data => {
-            res.status(201)
+            res.status(200)
                 .json({
                     Data
                 })
@@ -122,10 +134,6 @@ read.get('/name/:id', (req, res) => {
 
 
 
-
-
-
-
 read.get('/allBrands', (req, res) => {
     cosmetics.findAll({
             attributes: [
@@ -133,7 +141,7 @@ read.get('/allBrands', (req, res) => {
             ]
         })
         .then(Data => {
-            res.status(201)
+            res.status(200)
                 .json({
                     Data
                 })
@@ -160,7 +168,7 @@ read.get('/allBrands/:id', (req, res) => {
             ]
         })
         .then(Data => {
-            res.status(201)
+            res.status(200)
                 .json({
                     Data
                 })
