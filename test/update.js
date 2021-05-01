@@ -11,7 +11,7 @@ describe('UPDATE DATA', () => {
 
     it("UPDATE Data via ID ", done => {
         let cosmetic = {
-            Label: "Updated Lavbel",
+            Label: "Updated Label",
             Brand: "Updated Brand",
             Name: "Updated Name",
             Price: 75,
