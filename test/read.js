@@ -83,4 +83,23 @@ describe('READ DATA', () => {
             })
         })
 
+
+        /* 
+        TODO: Name ID
+        */
+
+
+
+
+
+        /* 
+        TODO: allBrands
+        */
+
+
+        /* 
+        TODO: '/allBrands/:id'
+        */
+
+
 })
