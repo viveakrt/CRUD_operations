@@ -25,7 +25,7 @@ update.put('/:id', (req, res) => {
                     id: id,
                 }
             }).then((data) => {
-                if (data) {
+                if (data[0]) {
                     res.status(200).json({
                             message: `Cosmetic with Id ${id} UPDATED`,
                         })

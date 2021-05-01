@@ -24,7 +24,7 @@ describe('UPDATE DATA', () => {
             Sensitive: 1
         };
 
-        const id = 7
+        const id = 9
         chai.request(server)
             .put(`/update/${id}`)
             .send(cosmetic)
