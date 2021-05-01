@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 
 describe('DELETE DATA', () => {
     it('DELETE using ID', done => {
-        const id = 1
+        const id = 6
         chai.request(server)
         .delete(`/delete/id/${id}`)
         .end((err,res)=>{
@@ -32,7 +32,19 @@ describe('DELETE DATA', () => {
 
 
 
-    /* 
-    TODO: del.delete('/all'
-    */
+    it('DELETE all Data', done => {
+
+        chai.request(server)
+        .delete(`/delete/all`)
+        .end((err,res)=>{
+            
+                res.should.have.status(200);
+                res.body.message.should.equal("All Data deleted");
+
+            done();
+
+        })
+    })
+
+
 })

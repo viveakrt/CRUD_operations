@@ -50,7 +50,7 @@ del.delete('/all', (req, res) => {
         .then(() => {
             res.status(200)
                 .json({
-                    Message: "All Data deleted"
+                    message: "All Data deleted"
                 })
                 .end();
         })
