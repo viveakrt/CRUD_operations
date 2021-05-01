@@ -9,6 +9,7 @@ chai.use(chaiHttp);
 
 describe('READ DATA', () => {
 
+
         it("GET all the data", done => {
 
             chai.request(server)
@@ -28,7 +29,7 @@ describe('READ DATA', () => {
             const id = 6;
             
             chai.request(server)
-            .get(`/get/${id}`)
+            .get(`/get/id/${id}`)
             .end((err,res)=>{
 
                 if(typeof id != 'number'){
@@ -84,22 +85,50 @@ describe('READ DATA', () => {
         })
 
 
-        /* 
-        TODO: Name ID
-        */
+        it('GET Data via Name', done => {
+            
+            const name = "face"
+            chai.request(server)
+            .get('/get/name/'+name)
+            .end((err,res)=>{
+
+                name.should.be.a('string');
+                res.should.have.status(200);
+                res.body.Data.should.be.a('array');
+
+                done();
+            })
+        })
 
 
 
+        it ('GET All Brands Data', done => {
+            chai.request(server)
+            .get('/get/allBrands')
+            .end((err,res)=>{
+
+                res.should.have.status(200);
+                res.body.Data.should.be.a('array');
+
+                done();
+            })
+
+        })
 
 
-        /* 
-        TODO: allBrands
-        */
 
+        it('GET Brands Data via Name', done => {
+            
+            const brand = "fi"
+            chai.request(server)
+            .get('/get/allBrands/'+brand)
+            .end((err,res)=>{
 
-        /* 
-        TODO: '/allBrands/:id'
-        */
+                res.should.have.status(200);
+                res.body.Data.should.be.a('array');
 
+                done();
+            })
+        })
 
 })

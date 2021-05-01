@@ -24,7 +24,30 @@ read.get('/all', (req, res) => {
         
 });
 
-read.get('/:id', (req, res) => {
+
+read.get('/allCategories', (req, res) => {
+    cosmetics.findAll({
+            attributes: [
+                [Sequelize.fn('DISTINCT', Sequelize.col('Label')), 'Category'],
+            ]
+        })
+        .then(Data => {
+            res.status(200)
+                .json({
+                    Data
+                })
+                .end();
+        }).catch(err => {
+            res.status(500).json({
+                    message: "Internal Error",
+                })
+                .end();
+        });
+
+});
+
+
+read.get('/id/:id', (req, res) => {
     const id = Number(req.params.id);
     if (Number.isInteger(id) && id > 0) {
         cosmetics.findByPk(id)
@@ -57,28 +80,6 @@ read.get('/:id', (req, res) => {
             })
             .end();
     }
-});
-
-
-read.get('/allCategories', (req, res) => {
-    cosmetics.findAll({
-            attributes: [
-                [Sequelize.fn('DISTINCT', Sequelize.col('Label')), 'Category'],
-            ]
-        })
-        .then(Data => {
-            res.status(200)
-                .json({
-                    Data
-                })
-                .end();
-        }).catch(err => {
-            res.status(500).json({
-                    message: "Internal Error",
-                })
-                .end();
-        });
-
 });
 
 read.get('/allCategories/:id', (req, res) => {
