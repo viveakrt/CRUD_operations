@@ -1,16 +1,19 @@
 const fs = require('fs');
+const winston = require('winston');
 const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const config = require('../config');
+const logger = require("../logger");
 const db = {};
 
 let sequelize;
 
+
 sequelize = new Sequelize(config.database, config.username, config.password, {
     host: config.host,
     dialect: 'mysql',
-
+    logging:  msg => logger.log('info',msg),
     pool: {
         max: 10,
         min: 0,
@@ -19,6 +22,8 @@ sequelize = new Sequelize(config.database, config.username, config.password, {
     }
 
 });
+
+
 
 
 

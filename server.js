@@ -9,6 +9,9 @@ const del = require("./routes/delete")
 const update = require("./routes/update")
 
 
+const logger = require("./logger");
+
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -25,7 +28,7 @@ db.sequelize
     .sync()
     .then(() => {
         app.listen(PORT, () => {
-            console.log(`PORT is ${PORT}`);
+			logger.log("info", `Server started at ${PORT}`);
         });
     })
     .catch((err) => {
