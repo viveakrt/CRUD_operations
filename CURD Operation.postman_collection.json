@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "824df61a-caef-4761-9322-a2859586ef0d",
+		"name": "CURD Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Cosmetics Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"Label\": \"Moisturizer\",\n    \"Brand\": \"SHISEIDO\",\n    \"Name\": \"White Lucent All Day Brightener Broad Spectrum SPF 23 Moisturizer\",\n    \"Price\": 62,\n    \"Rank\": 4.6,\n    \"Ingredients\": \"Water, Sd Alcohol 40-B, Dimethicone, Dipropylene Glycol, Diisopropyl Sebacate, Glycerin, Peg-60 Hydrogenated Castor Oil, Potassium Methoxysalicylate, Xanthan Gum, Peg/Ppg-14/7 Dimethyl Ether, Tocopheryl Acetate, 2-O-Ethyl Ascorbic Acid, Ascorbyl Tetraisopalmitate, Sodium Hyaluronate, Paeonia Suffruticosa Root Extract, Crataegus Monogyna Flower Extract, Polyquaternium-51, Rehmannia Chinensis Root Extract, Uncaria Gambir Extract, Houttuynia Cordata Extract, Ppg-17, Peg-240/Hdi Copolymer Bis-Decyltetradeceth-20 Ether, Triethanolamine, Silica, Isostearic Acid, Butylene Glycol, Carbomer, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Alcohol, Bht, Sodium Metaphosphate, Disodium Edta, Tocopherol, Zinc Oxide, Sodium Metabisulfite, Alumina, Prunus Yedoensis Leaf Extract, Methylparaben, Ethylparaben, Phenoxyethanol, Fragrance, Titanium Dioxide, Mica, Iron Oxides.\",\n    \"Combination\": 1,\n    \"Dry\": 1,\n    \"Normal\": 1,\n    \"Oily\": 0,\n    \"Sensitive\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Multiple Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"SATURDAY SKIN\",\n        \"Name\": \"Featherweight Daily Moisturizing Cream\",\n        \"Price\": 49,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Water, Butylene Glycol, Ethylhexyl Palmitate, Glycerin, Cyclopentasiloxane, Dipropylene Glyco,l Octyldodecyl Myristate, Silica, Cetearyl Alcohol, Cyclohexasiloxane, Polysorbate 60, 1,2-Hexanediol, Citrus Limon (Lemon) Peel Oil, Juniperus Mexicana Oil, Hydrolyzed Avocado Protein, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Grandis (Grapefruit) Peel Oil, Eucalyptus Globulus Leaf Oil, Lavandula Angustifolia (Lavender) Oil, Rosmarinus Officinalis (Rosemary) Leaf Oil, Ananas Sativus (Pineapple) Fruit Extract, Pyrus Malus (Apple) Fruit Extract, Actinidia Chinensis (Kiwi) Fruit Extract, Fragaria Vesca (Strawberry) Fruit Extract, Prunus Persica (Peach) Fruit Extract, Vitis Vinifera (Grape) Fruit Extract, Ficus Carica (Fig) Fruit Extract, Ginkgo Biloba Nut Extract, Morus Alba Fruit Extract, Punica Granatum Fruit Extract, Phoenix Dactylifera (Date) Seed, Glyceryl Stearate, Ammonium Acryloyldimethyltaurate/VP Copolymer, Sorbitan Sesquioleate, Tromethamine, PEG-100 Stearate, Caprylyl Glycol, Cetearyl Olivate, Sorbitan Olivate, Stearic Acid, Dimethicone Crosspolymer, Dimethiconol, Hydrogenated Lecithin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ceteareth-20, Maltodextrin, Saccharide Hydrolysate, Cholesterol, PEG-800, Ascorbic Acid, Polysorbate 20, sh-Oligopeptide-1, sh-Polypeptide-1, sh-Oligopeptide-2, sh-Polypeptide-22, sh-Polypeptide-45, sh-Polypeptide-8, sh-Polypeptide-9, Carbomer, Xanthan Gum, Disodium EDTA, Phenoxyethanol.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"LA MER\",\n        \"Name\": \"The Moisturizing Matte Lotion\",\n        \"Price\": 270,\n        \"Rank\": 3.9,\n        \"Ingredients\": \"Water, Algae (Seaweed) Extract, Propanediol, Squalane, Propylene Glycol Dicaprylate/Dicaprate, Methyl Methacrylate Crosspolymer, Hydrogenated Lecithin, Butylene Glycol, Octyldodecyl Neopentanoate, Glyceryl Stearate Se, Sesamum Indicum (Sesame) Seed Oil, Medicago Sativa (Alfalfa) Seed Powder, Helianthus Annuus (Sunflower) Seedcake, Prunus Amygdalus Dulcis (Sweet Almond) Seed Meal, Eucalyptus Globulus (Eucalyptus) Leaf Oil, Sodium Gluconate, Copper Gluconate, Calcium Gluconate, Magnesium Gluconate, Zinc Gluconate, Tocopheryl Succinate, Niacin, Sesamum Indicum (Sesame) Seed Powder, Citrus Aurantifolia (Lime) Peel Extract, Nylon-12, Sucrose, Salicornia Herbacea Extract, Hydrolyzed Rice Extract, Sea Salt/Maris Sal/Sel Marin, Laminaria Saccharina Extract, Crithmum Maritimum Extract, Chlorella Vulgaris Extract, Padina Pavonica Thallus Extract, Macrocystis Pyrifera (Kelp) Extract, Spirulina Platensis (Algae) Powder, Plankton Extract, Hydrolyzed Algin, Sigesbeckia Orientalis (St. Paul'S Wort) Extract, Glycerin, Laminaria Digitata Extract, Sodium Hyaluronate, Glucose Oxidase, Lactoperoxidase, Acetyl Hexapeptide-8, Dipalmitoyl Hydroxyproline, Caffeine, Glucose, Caprylic/Capric Triglyceride, Behenyl Alcohol, Dimethicone, Tocopheryl Acetate, Acrylamide/Sodium Acryloyldimethyltaurate Copolymer, Tetrahexyldecyl Ascorbate, Polyacrylate Crosspolymer-6, Isohexadecane, Lecithin, Potassium Stearate, Hydrogenated Vegetable Oil, Kaolin, Polysorbate 80, Fragrance, Xanthan Gum, Alcohol Denat., Disodium Edta, Bht, Limonene, Linalool, Citral, Hydroxycitronellal, Citronellol, Geraniol, Benzyl Salicylate, Benzyl Benzoate, Phenoxyethanol\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"HERBIVORE\",\n        \"Name\": \"Jasmine Green Tea Balancing Toner\",\n        \"Price\": 39,\n        \"Rank\": 4.2,\n        \"Ingredients\": \"Jasminum Officinale (Jasmine) Flower Water, Hamamelis Virginiana (Witch Hazel) Flower Water, Aloe Barbadensis Leaf Water, Salix Alba (Willow) Bark Extract, Camellia Sinensis (Green Tea) Leaf Extract, Camellia Sinensis (White Tea) Leaf Extract, Zingiber Officinale (Ginger) Root Extract, Leuconostoc/Radish Root Ferment Filtrate, Jasminum Grandiflorum Floral Extract,Melia Azadirachta Leaf Extract, Melia Azadirachta Flower Extract.\",\n        \"Combination\": 1,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"CLARINS\",\n        \"Name\": \"Super Restorative Night Age Spot Correcting Replenishing Cream\",\n        \"Price\": 136,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Cetearyl Isononanoate, Dimethicone, Glycerin, Hydrogenated Polyisobutene, Cetearyl Alcohol, Butyrospermum Parkii (Shea) Butter, Hydrogenated Coco-Glycerides, Pentylene Glycol, Glyceryl Stearate, Peg-100 Stearate, Cetearyl Glucoside, Phenoxyethanol, Parfum/Fragrance, Propylene Glycol, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Hexylresorcinol, Carbomer, Squalane, Polymethyl Methacrylate, Mica, Ci 77891/Titanium Dioxide, Tocopheryl Acetate, Sodium Hyaluronate, Sodium Hydroxide, Sorbic Acid, Xanthan Gum, Caprylic/Capric Triglyceride, O-Cymen-5-Ol, Butylene Glycol, Citric Acid, Disodium Edta, Polysorbate 60, Ginkgo Biloba Leaf Extract, Harungana Madagascariensis Extract, Sorbitan Isostearate, Olea Europaea (Olive) Fruit Extract, Cistus Monspeliensis Extract, Acetyl Tetrapeptide-2, Dextran, Tocopherol.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"KATE SOMERVILLE\",\n        \"Name\": \"Goat Milk Moisturizing Cream\",\n        \"Price\": 65,\n        \"Rank\": 4.1,\n        \"Ingredients\": \"Water, Ethylhexyl Palmitate, Myristyl Myristate, Glyceryl Stearate, PEG-100 Stearate, Cetearyl Ethylhexanoate, Decyl Oleate, Glycerin, Propanediol, Goat Milk Powder, Lactose, Milk Protein, Helianthus Annuus (Sunflower) Seed Oil, Hamamelis Virginiana (Witch Hazel) Flower Water, Cocos Nucifera (Coconut) Oil, Persea Gratissima (Avocado) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Aloe Barbadensis Leaf Juice Powder, Oryza Sativa (Rice) Bran Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Tocopheryl Acetate, Tocopherol, Caprylyl Glycol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Phenoxyethanol, Ethylhexylglycerin, Hexylene Glycol, Xanthan Gum, Aminomethyl Propanol, Disodium EDTA, Lactic Acid, Benzoic Acid.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Moisturizer\",\n        \"Brand\": \"GO-TO\",\n        \"Name\": \"Face Hero\",\n        \"Price\": 34,\n        \"Rank\": 4.8,\n        \"Ingredients\": \"Almond Oil, Jojoba Oil, Macadamia Oil, Brazil Nut Oil, Evening Primrose Oil, Buriti Oil, Arnica Oil, Rosehip Oil, Calendula Oil, Kiwi Fruit Seed Oil, Tocopherol (Vitamin E), Totarol, Rosemary Leaf Extract, Natural Fragrance (Orange Blossom & Rose Gardenia.)\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"DRUNK ELEPHANT\",\n        \"Name\": \"T.L.C. Sukari Babyfacial™\",\n        \"Price\": 80,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Glycolic Acid, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Glycerin, Sodium Hydroxide, Salicylic Acid, Aloe Barbadensis Leaf Extract, Camellia Oleifera Leaf Extract, Lactobacillus/Pumpkin Ferment Extract, Lactobacillus/Punica Granatum Fruit Ferment Extract, Opuntia Ficus-Indica Extract, Pyrus Malus (Apple) Fruit Extract, Silybum Marianum Seed Extract, Saccharomyces Cerevisiae Extract, Vitis Vinifera (Grape) Juice Extract, Camellia Sinensis Leaf Powder, Cicer Arietinum Seed Powder, Sclerocarya Birrea Seed Oil, Passiflora Edulis Seed Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Hyaluronate Crosspolymer, Sodium PCA, Allantoin, Dipotassium Glycyrrhizate, Dextrin, Polydextrose, Sorbitan Isostearate, Amylopectin, Niacinamide, Phytosphingosine, Lactic Acid, Propanediol, Citric Acid, Titanium Dioxide, Trisodium Ethylenediamine Disuccinate, Polysorbate 60, Caprylyl Glycol, Chlorphenesin, Phenoxyethanol.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"DRUNK ELEPHANT\",\n        \"Name\": \"T.L.C. Framboos™ Glycolic Night Serum\",\n        \"Price\": 90,\n        \"Rank\": 4.3,\n        \"Ingredients\": \"Water, Glycolic Acid, Butylene Glycol, Glycerin, Sodium Hydroxide, Salicylic Acid, Lactic Acid, Citric Acid, Vitis Vinifera (Grape) Juice Extract, Aloe Barbadensis Leaf Juice, Opuntia Ficus-Indica Extract, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Camellia Sinensis Leaf Extract, Rubus Idaeus (Raspberry) Fruit Extract, Saccharomyces Cerevisiae Extract, Buddleja Davidii Meristem Cell Culture, Sclerocarya Birrea Seed Oil, Sodium Hyaluronate Crosspolymer, Allantoin, Hydroxyethylcellulose, Galactoarabinan, Propanediol, Disodium EDTA, Xanthan Gum, Hexylene Glycol, Phenoxyethanol, Caprylyl Glycol, Ethylhexylglycerin, Sodium Nitrate, Potassium Sorbate, Pentylene Glycol, Sodium Benzoate.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"FRESH\",\n        \"Name\": \"Soy Face Cleanser\",\n        \"Price\": 38,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"Water, Coco-Glucoside, Glycerin, Butylene Glycol, PEG-7 GlycerylCocoate, Xanthan Gum, Soybean Oil, Sunflower Seed Oil, Borago Officinalis Seed Oil, Aloe Barbadensis Leaf Juice, Cucumber Fruit Extract, Rosa Damascena Extract, Rosa Damascena Flower Water, Centaurea Cyanus Flower Extract, Soybean Sterols, Panax Ginseng Root Extract, Rosa Damascena Flower Oil, Mallow Flower Extract, Tocopherol, Ascorbyl Palmitate, PEG-120Methyl Glucose Dioleate, PEG-40Hydrogenated Castor Oil, Caprylyl Glycol, Polysorbate20, Caprylic/Capric Triglyceride, Silica, Benzoic Acid, Disodium EDTA, Citric Acid, Behenyl Alcohol, Glyceryl Stearate, Lecithin, Pentylene Glycol, Hydrolyzed Soy Protein, Caramel, Sodium Benzoate, Potassium Sorbate, Phenoxyethanol.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"FARMACY\",\n        \"Name\": \"Green Clean Makeup Meltaway Cleansing Balm with Echinacea GreenEnvy™\",\n        \"Price\": 34,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Cetyl Ethylhexanoate, Caprylic/Capric Triglyceride, Peg-20 Glyceryl Triisostearate, Peg-10 Isostearate, Polyethylene, Phenoxyethanol, Sorbitan Sesquioleate, Citrus Aurantifolia (Lime) Oil, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Melia Azadirachta Leaf Extract, Melia Azadirachta Flower Extract, Amino Esters-1, Citrus Aurantium Dulcis (Orange) Peel Oil, Amber Powder, Cananga Odorata Flower Oil, Coccinia Indica Fruit Extract, Solanum Melongena (Eggplant) Fruit Extract, Curcuma Longa (Turmeric) Root Extract, Ocimum Sanctum Leaf Extract, Corallina Officinalis Extract, Moringa Oleifera Seed Oil, Zingiber Officinale (Ginger) Root Oil, Helianthus Annuus (Sunflower) Seed Oil, Water, Glycerin, Butylene Glycol, Echinacea Purpurea Root Extract, Carica Papaya (Papaya) Fruit Extract, Moringa Pterygosperma Seed Extract, Disodium Phosphate, Citric Acid.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"PHILOSOPHY\",\n        \"Name\": \"Purity Made Simple Cleanser\",\n        \"Price\": 24,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Sodium Lauroamphoacetate, Sodium Trideceth Sulfate, Limnanthes Alba (Meadowfoam) Seed Oil, Coco-Glucoside, Coconut Alcohol, Peg-120 Methyl Glucose Dioleate, Glycerin, Carbomer, Isopropyl Alcohol, Polysorbate 20, Citric Acid, Imidazolidinyl Urea, Methylparaben, Aniba Rosaeodora (Rosewood) Wood Oil, Propylparaben, Triethanolamine, Amyris Balsamifera Bark Oil, Bulnesia Sarmientoi Wood Oil, Cymbopogon Martini Oil, Pelargonium Graveolens Flower Oil, Rosa Centifolia Flower Oil, Santalum Album (Sandalwood) Oil, Daucus Carota Sativa (Carrot) Seed Oil, Mimosa Tenuiflora Bark Extract, Ormenis Multicaulis Oil, Piper Nigrum (Pepper) Fruit Oil, Salvia Sclarea (Clary) Oil, Fd&C Yellow No. 5 (Ci 19140).\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"LANCÔME\",\n        \"Name\": \"Tonique Confort Re-Hydrating Comforting Toner with Acacia Honey\",\n        \"Price\": 26,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Water, Butylene Glycol, Glycerin, Cyclopentasiloxane, Phenoxyethanol, Isopropyl Palmitate, Peg-60 Hydrogenated Castor Oil, Triethanolamine, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Methylparaben, Honey, Mannitol, Fragrance, Tocopheryl Acetate, Propylparaben, Sodium Hyaluronate, Cyclodextrin, Prunus Amygdalus Dulcis Protein/ Sweet Almond Protein, Hexyl Cinnamal, Faex/ Yeast Extract, Alpha-Isomethyl Ionone, Disodium Succinate, Ci 14700/ Red 4.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"FRESH\",\n        \"Name\": \"Rose Deep Hydration Facial Toner\",\n        \"Price\": 44,\n        \"Rank\": 4.2,\n        \"Ingredients\": \"Water, Glycerin, Butylene Glycol, Rosa Centifolia Flower, Rosa Damascena Flower Water, Rosa Multiflora Fruit Extract, Angelica Keiskei Extract, Rosa Damascena Flower Oil, Sodium Hyaluronate, PEG-150, PPG-26-Buteth-26, PEG-40 Hydroge- nated Castor Oil, Sodium Citrate, Xanthan Gum, Citric Acid, BHT, Parfum (Fragrance), Phenoxyethanol, Citronellol, Geraniol.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"TATCHA\",\n        \"Name\": \"The Rice Polish Foaming Enzyme Powder\",\n        \"Price\": 65,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"Microcrystalline Cellulose, Oryza Sativa (Rice) Powder, Sodium Lauryl Phosphate, Sodium Palmoyl Glutamate, Sodium Lauroyl Glutamate, Lauryl Betaine, Sodium Lauroyl Methylaminopropionate, Saccharomyces/Camellia Sinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate*, Papain, Oryza Sativa (Rice) Bran, Sericin, Hydrolyzed Silk, Propanediol, Dextrin, Phytosteryl/Octyldodecyl Lauroyl Glutamate, Ethylhexylglycerin, Tocopherol, Propyl Alcohol, Alcohol, Phenoxyethanol. *Hadasei-3.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"CLINIQUE\",\n        \"Name\": \"Take The Day Off Cleansing Balm\",\n        \"Price\": 29,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Ethylhexyl Palmitate , Carthamus Tinctorius (Safflower) Seed Oil , Caprylic/Capric Triglyceride , Sorbeth-30 Tetraoleate , Polyethylene , Peg-5 Glyceryl Triisostearate , Water , Tocopherol , Phenoxyethanol\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"KIEHL'S SINCE 1851\",\n        \"Name\": \"Calendula Herbal Extract Alcohol Free Toner\",\n        \"Price\": 35,\n        \"Rank\": 4.3,\n        \"Ingredients\": \"Water, Propylene Glycol, Pentylene Glycol, Methylparaben, Disodium EDTA, Arctium Lappa Extract/Arctium Lappa Root Extract, Calendula Officinalis Extract/Calendula Officinalis Flower Extract, Calendula Officinalis Flower Extract, Hydrolyzed Corn Starch, Allantoin, Hedera Helix Extract - Ivy Leaf/Stem Extract, Althaea Officinalis/Althaea Officinalis Root Extract.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"LANCÔME\",\n        \"Name\": \"Bi-Facil Double-Action Eye Makeup Remover\",\n        \"Price\": 30,\n        \"Rank\": 4.7,\n        \"Ingredients\": \"Water, Cyclopentasiloxane, Isohexadecane, Sodium Chloride, Poloxamer 184, Hexylene Glycol, Dipotassium Phosphate, Benzyl Alochol, Potassium Phosphate, Quaternium-15, Benzalkonium Chloride, Fragrance, Citronellol, Geraniol.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"SEPHORA COLLECTION\",\n        \"Name\": \"Cleansing & Exfoliating Wipes\",\n        \"Price\": 7,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Caprylic/Capric Triglyceride, Fragrance, Phenoxyethanol, Glycerin, Benzyl Alcohol, Ethylhexylglycerin, Glyceryl Stearate, Sodium Lauroyl Lactylate, Lauryl Glucoside, Cocos Nucifera (Coconut) Fruit Juice, Cetearyl Alcohol, Sodium Stearoyl Lactylate, Sodium Hydroxide, Limonene, Tocopherol, Citric Acid, Sodium Benzoate, Potassium Sorbate.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"TATCHA\",\n        \"Name\": \"The Deep Cleanse\",\n        \"Price\": 38,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"* Hadasei-3\",\n        \"Combination\": 1,\n        \"Dry\": 0,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"FIRST AID BEAUTY\",\n        \"Name\": \"Face Cleanser\",\n        \"Price\": 20,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"Water, Sodium Cocoyl Isethionate, Glycerin, Stearic Acid, Stearyl Alcohol, Allantoin, Chrysanthemum Parthenium (Feverfew) Extract, Camellia Sinensis Leaf Extract, Glycyrrhiza Glabra (Licorice) Root Extract, Aloe Barbadensis Leaf Juice, Tocopherol, Ascorbyl Palmitate, Caprylyl Glycol, Sodium Pca, Coco-Glucoside, Glyceryl Oleate, Hydroxypropyl Methylcellulose, Hydrogenated Palm Glycerides Citrate, Disodium Cocoamphodiacetate, Lecithin, Phenoxyethanol, Sodium Chloride, Disodium Edta, Citric Acid, Maltodextrin, Leuconostoc/Radish Root Ferment Filtrate, Edta.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"ORIGINS\",\n        \"Name\": \"Checks and Balances™ Frothy Face Wash\",\n        \"Price\": 23,\n        \"Rank\": 4.3,\n        \"Ingredients\": \"Water, Lavandula Angustifolia (Lavender) Flower Water, Myristic Acid, Glycerin, Behenic Acid, Sodium Methyl Cocoyl Taurate, Palmitic Acid, Potassium Hydroxide, Lauric Acid, Stearic Acid, Anthemis Nobilis Flower Oil *, Mentha Viridis (Spearmint) Leaf Oil*, Pelargonium Graveolens Flower Oil*, Lavandula Hybrida Oil*, Citrus Aurantium Bergamia (Bergamot) Fruit Oil*, Styrax Benzoin Gum, Linalool, Peg-3 Distearate, Tourmaline, Laminaria Saccharina Extract, Hydrolyzed Wheat Protein, Cetearyl Alcohol, Polyquaternium-7, Butylene Glycol, Disodium Edta, Methylchloroisothiazolinone, Methylisothiazolinone.*Essential Oil.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"SHISEIDO\",\n        \"Name\": \"Facial Cotton\",\n        \"Price\": 10,\n        \"Rank\": 4.9,\n        \"Ingredients\": \"No Info\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"KATE SOMERVILLE\",\n        \"Name\": \"ExfoliKate® Intensive Exfoliating Treatment\",\n        \"Price\": 24,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"Water, Lactic Acid, Silica, Glycine Soja (Soybean) Oil, Pectin, Cetearyl Alcohol, Carica Papaya (Papaya) Fruit, Ceteareth-20, Cetyl Alcohol, Phenoxyethanol, Dehydroxanthan Gum, Glyceryl Stearate, PEG-100 Stearate, Salicylic Acid, Lactobacillus/Pumpkin Ferment Extract, Alcohol Denat., Sorbic Acid, Cinnamal, Honey/Mel/Miel, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Eugenol, Potassium Sorbate, Limonene, Linalool, Lavandula Angustifolia (Lavender) Oil, Beta-Carotene, Chlorophyllin-Copper Complex, Aloe Barbadensis Leaf Juice Powder, Bromelain, Papain, Retinyl Palmitate, Tocopheryl Acetate, Cinnamomum Cassia Leaf Oil, Acetic Acid, Pogostemon Cablin Oil, Geranium Maculatum Oil, Aniba Rosaeodora (Rosewood) Wood Extract, Citrus Aurantium Dulcis (Orange) Peel Oil.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"LA MER\",\n        \"Name\": \"The Cleansing Foam\",\n        \"Price\": 95,\n        \"Rank\": 4.3,\n        \"Ingredients\": \"Declustered Water (+)/Aqua/Eau De-Structuree (+), Myristic Acid, Glycerin, Behenic Acid, Palmitic Acid, Sodium Methyl Cocoyl Taurate, Potassium Hydroxide, Lauric Acid, Stearic Acid, Algae (Seaweed) Extract, Sesamum Indicum (Sesame) Seed Oil, Medicago Sativa (Alfalfa) Seed Powder, Helianthus Annuus (Sunflower) Seedcake, Prunus Amygdalus Dulcis (Sweet Almond) Seed Meal, Eucalyptus Globulus (Eucalyptus) Leaf Oil, Sodium Gluconate, Copper Gluconate, Calcium Gluconate, Magnesium Gluconate, Zinc Gluconate, Tocopheryl Succinate, Niacin, Sesamum Indicum (Sesame) Seed Powder, Quartz Powder, Nephrite Powder, Pearl Powder, Caffeine, Sea Salt/Maris Sal/Sel Marin, Humic Acids, Sodium Hyaluronate, Sucrose, Tourmaline, Macrocystis Pyrifera (Kelp) Protein, Polyquaternium-51, Aloe Barbadensis Leaf Water, Trehalose, Cellulose, Butylene Glycol, Sodium Coco Pg-Dimonium Chloride Phosphate, Sodium Bicarbonate, Sodium Pca, Peg-3 Distearate, Urea, Fragrance, Disodium Edta, Linalool, Limonene, Phenoxyethanol, Methylchloroisothiazolinone, Methylisothiazolinone, Yellow 5 (Ci 19140), Yellow 6 (Ci 15985), Blue 1 (Ci 42090), Green 5 (Ci 61570)\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"BOSCIA\",\n        \"Name\": \"MakeUp-BreakUp Cool Cleansing Oil\",\n        \"Price\": 32,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Cetyl Ethylhexanoate, Olea Europaea (Olive) Oil, Polyglyceryl-10 Diisostearate, PEG-20 Glyceryl Triisostearate, Hydrogenated Polyisobutene, Glyceryl Behenate/Eicosadioate, Persea Gratissima (Avocado) Oil, Isostearic Acid, Tocopheryl Acetate, Eucalyptus Globulus Leaf Oil, Menthol, Melia Azadirachta Leaf Extract, Simmondsia Chinensis (Jojoba) Seed Oil, Rosa Canina Fruit Oil, Melia Azadirachta Flower Extract, Amino Esters-1, Carthamus Tinctorius (Safflower) Seed Oil, Butylene Glycol, Water, Coccinia Indica Fruit Extract, Solanum Melongena (Eggplant) Fruit Extract, Camellia Sinensis Leaf Extract, Aloe Barbadensis Flower Extract, Camellia Oleifera Leaf Extract, Lawsonia Inermis (Henna) Extract, Curcuma Longa (Turmeric) Root Extract, Corallina Officinalis Extract, Ocium Basilicum (Basil) Extract, Simmondsia Chinensis (Jojoba) Seed Extract, Ocimum Sanctum Leaf Extract, Epilobium Angustifolium Flower/Leaf/Stem Extract.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"DRUNK ELEPHANT\",\n        \"Name\": \"Beste™ No. 9 Jelly Cleanser\",\n        \"Price\": 34,\n        \"Rank\": 4.1,\n        \"Ingredients\": \"Water, Sodium Lauroyl Methyl Isethionate, Glycerin, Cocamidopropyl Betaine, Cocamidopropyl Hydroxysultaine, Sodium Methyl Oleoyl Taurate, Propanediol, Aloe Barbadensis Leaf Extract, Coco-Glucoside, Lauryl Glucoside, Cucumis Melo Cantalupensis Fruit Extract, Sclerocarya Birrea Seed Oil, Dipotassium Glycyrrhizate, Citric Acid, Phenoxyethanol, Sodium Benzoate, Sodium Chloride.\",\n        \"Combination\": 1,\n        \"Dry\": 0,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"BOSCIA\",\n        \"Name\": \"Purifying Cleansing Gel\",\n        \"Price\": 28,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Hydrogenated Starch Hydrolysate, Diglycerin, Sodium Cocoyl Glycinate, Disodium Cocoyl Glutamate, Sodium Cocoyl Glutamate, Butylene Glycol, Methyl Gluceth-10, Acrylates/Steareth-20 Methacrylate Copolymer, Sodium Lauroyl Glutamate, Rosmarinus Officinalis (Rosemary) Leaf Extract, Camellia Oleifera Leaf Extract, Hydrangea Serrata Leaf Extract, Simmondsia Chinensis (Jojoba) Seed Extract, Epilobium Angustifolium Flower/Leaf/Stem Extract, Pelargonium Graveolens Flower Oil, Glycerin, Cellulose Gum, Citric Acid, Polysorbate 20, Sclerotium Gum, Trisodium Ethylenediamine Disuccinate, 1,2 Hexanediol, Caprylyl Glycol.\",\n        \"Combination\": 1,\n        \"Dry\": 0,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"OLEHENRIKSEN\",\n        \"Name\": \"Balancing Force™ Oil Control Toner\",\n        \"Price\": 26,\n        \"Rank\": 4.4,\n        \"Ingredients\": \"Water, Polysorbate 20, Hamamelis Virginiana (Witch Hazel) Water, Gylcerin, Gluconolactone, Glycolici Acid, Lactic Acid, Oleth-20, Salicylic Acid, Sodium Hydroxide, Sodium Benzoate, Menthyl Lactate, Eucalpytus Globulus Leaf Oil, Mentha Piperita (Peppermint) Oil, Melia Azadirachta Seed Oil, Linoleic Acid, Macrocystis Pyrifera (Kelp) Extract, Eucalyptus Globulus Leaf Extract, Chondrus Crispus (Carrageenan) Extract, Camellia Sinensis Leaf Extract, Linolenic Acid, Phenoxyethanol, Calcium Gluconate, Benzoic Acid, Tocopherol, Limonene.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"AMOREPACIFIC\",\n        \"Name\": \"Treatment Enzyme Peel\",\n        \"Price\": 60,\n        \"Rank\": 4.7,\n        \"Ingredients\": \"Lactose, Mannitol, Sodium Cocoyl Glycinate, Sodium Lauroyl Glutamate, Zeolite, Water, Silica, Allantoin, Betaine, Papain, Carica Papaya (Papaya) Fruit Extract, Camellia Sinensis Leaf Extract, Zizyphus Jujuba Fruit Extract, Zingiber Officinale (Ginger) Root Extract, Dipotassium Glycyrrhizate, Zea Mays (Corn) Starch, Butylene Glycol, Polymethyl Methacrylate, Peg-75, Green 3 (CI 42053), Yellow 5 (CI 19140), Fragrance.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"CLINIQUE\",\n        \"Name\": \"Take The Day Off Makeup Remover For Lids, Lashes & Lips\",\n        \"Price\": 19,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Water , Isohexadecane , Dimethicone , Cyclopentasiloxane , Trisiloxane , Peg-4 Dilaurate , Lauryl Methyl Gluceth-10 Hydroxypropyldimonium Chloride , Hexylene Glycol , Sodium Chloride , Potassium Phosphate , Dipotassium Phosphate , Dipotassium Edta , Phenoxyethanol Please be aware that ingredient lists may change or vary from time to time. Please refer to the ingredient list on the product package you receive for the most up to date list of ingredients.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"SK-II\",\n        \"Name\": \"Facial Treatment Clear Lotion Toner\",\n        \"Price\": 76,\n        \"Rank\": 4.1,\n        \"Ingredients\": \"Water, Galactomyces Ferment Filtrate (Pitera), Butylene Glycol, Polysorbate 20, Glycerin, Sodium Hyaluronate, PEG-150, Cellulose Gum, Disodium EDTA, Citric Acid, Salicylic Acid, Lactic Acid, Malic Acid, Sodium Citrate, Sodium Benzoate, Methylparaben.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"FRESH\",\n        \"Name\": \"Sugar Face Polish Exfoliator\",\n        \"Price\": 62,\n        \"Rank\": 4.6,\n        \"Ingredients\": \"Sucrose, Propylene Glycol Dicaprylate/Dicaprate, PEG-7 Glyceryl Cocoate, Stearalkonium Hectorite, Fragaria Vesca (Strawberry) Fruit Extract, Euphorbia Cerifera (Candelilla) Wax, Mangifera Indica (Mango) Seed Butter, Propylene Carbonate, Parfum (Fragrance), Limonene, Limnanthes Alba (Meadowfoam) Seed Oil, Vitis Vinifera (Grape) Seed Oil, Prunus Domestica Seed Oil, Fructose, Glucose, Tocopheryl Acetate, Caramel, Glycerin, Aqua (Water), Potassium Sorbate, BHT, Citral.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"EVE LOM\",\n        \"Name\": \"Cleanser\",\n        \"Price\": 80,\n        \"Rank\": 4.3,\n        \"Ingredients\": \"Paraffinum Liquidum, PEG-30 Lanolin, Cetearyl Alcohol, Bis-Diglyceryl Polyacyladipate-2, Aluminum Stearate, Theobroma Cacao (Cocoa) Seed Butter, Peg-75 Lanolin, Phenoxyethanol, Eugenia Caryophyllus (Clove) Leaf Oil, Humulus Lupulus (Hop) Oil, Chamomilla Recutita (Matricaria) Flower Oil, Eucalyptus Globulus Leaf Oil, BHT.\",\n        \"Combination\": 1,\n        \"Dry\": 1,\n        \"Normal\": 1,\n        \"Oily\": 1,\n        \"Sensitive\": 1\n    },\n    {\n        \"Label\": \"Cleanser\",\n        \"Brand\": \"KATE SOMERVILLE\",\n        \"Name\": \"ExfoliKate® Cleanser Daily Foaming Wash\",\n        \"Price\": 38,\n        \"Rank\": 4.5,\n        \"Ingredients\": \"Water, Stearic Acid, Sodium Cocoyl Glycinate, Lauramidopropyl Betaine, Glycerin, Hydroxypropyl Starch Phosphate, Cetearyl Phosphate, Xylitylglucoside, Dimethicone PEG-8 Meadowfoamate, Anhydroxylitol, Xylitol, Leuconostoc/Radish Root Ferment Filtrate, Bromelain, Papain, Lactobacillus/Pumpkin Fruit Ferment Filtrate, Lauramide DIPA, Aloe Barbadensis Leaf Juice Powder, Lactic Acid, Glycolic Acid, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Aniba Rosaeodora (Rosewood) Wood Extract, Citrus Aurantium Dulcis (Orange) Peel Oil, Geranium Maculatum Oil, Benzyl Alcohol, Sodium Hydroxide, Chlorphenesin, Chlorophyllin-Copper Complex (CI 75810), Maltodextrin.\",\n        \"Combination\": 0,\n        \"Dry\": 0,\n        \"Normal\": 0,\n        \"Oily\": 0,\n        \"Sensitive\": 0\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data via Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete/id/223",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						"id",
+						"223"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All Brands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/allBrands",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"allBrands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search  Brands  ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/allBrands/fi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"allBrands",
+						"fi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/allCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"allCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/allCategories/er",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"allCategories",
+						"er"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Data via Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/name/face",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"name",
+						"face"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data via ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\" : \"New Face Wash\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Data via Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
